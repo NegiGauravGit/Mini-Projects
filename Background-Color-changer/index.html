@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Color Chnager</title>
+    <link rel="icon" href="/Week-3/easy/img/icons8-color-picker-16.png" type="image/png">
+    <style>
+      main {
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 12px;
+        background-color: rgb(4, 160, 174);
+        max-width: fit-content;
+        margin: auto;
+        position: relative;
+      }
+      .outer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: inherit;
+        border-radius: inherit;
+        filter: blur(5px);
+        z-index: 1;
+      }
+      .inner {
+        z-index: 2;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .addColor{
+        z-index: 2;
+        display: flex;
+        gap: 10px;
+      }
+      .btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bolder;
+      }
+      .btn:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+      input{
+        font-size: large;
+        border-radius: 5px;
+        border: none;
+        background-color: transparent; 
+        border: 3px solid #000; 
+        padding: 10px;
+        font-size: 16px;
+        color: #000; 
+        outline: none;
+      }
+      input:focus {
+        border-color: #ff5e00; /* Change the border color on focus if needed */
+      }
+      input::placeholder {
+        color: whitesmoke; /* Set your desired placeholder color */
+        opacity: 1;  /* Ensures the placeholder is fully visible */
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="outer"></div>
+      <div class="inner">
+        <button class="btn" id="btn-1" style="background-color: red">Red</button>
+        <button class="btn" id="btn-2" style="background-color: yellow">Yellow</button>
+        <button class="btn" id="btn-3" style="background-color: green">Green</button>
+        <button class="btn" id="btn-4" style="background-color: blue">Blue</button>
+        <button class="btn" id="btn-5" style="background-color: purple">Purple</button>
+        <button class="btn" id="btn-6" style="background-color: grey">Grey</button>
+      </div>
+      <div class="addColor">
+        <input type="text" placeholder="Enter Your Custom Color" id="addColor">
+        <button class="btn" id="applyBtn" style="background-color: rgb(199, 122, 28);">Apply color</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

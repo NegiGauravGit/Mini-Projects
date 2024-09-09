@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .outer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: rgba(0, 81, 255, 0.816);
+        }
+        .content{
+            height: auto;
+            width: 50vw;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;flex-direction: column;
+            gap: 30px;
+            box-sizing: border-box;
+            z-index: 2;
+        }
+        .content button{
+            padding: 10px;
+            font-size: larger;
+            font-weight: bolder;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+            cursor: pointer;
+            background-color: greenyellow;
+        }
+        ol{
+            padding-left: 15px;
+        }
+        .quiz-section{
+            height: auto;
+            width: 40vw;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 20px;
+            display: none;
+            justify-content: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            font-family: "SUSE";
+        }
+        form{
+            font-size: larger;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        #submit-btn{
+            padding: 10px;
+            font-size: larger;
+            font-weight: bolder;
+            border-radius: 5px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: greenyellow;
+        }
+        #result{
+            font-family: "Nerko";
+        }
+        .show-result p{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            font-family: "Nerko";
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="outer">
+            <div class="content">
+                <h3>Welcome to the Ultimate Computer Science Quiz!
+                    Get ready to test your knowledge in the world of computers, algorithms, and technology. Whether you're a coding genius or just starting your journey, this quiz will challenge your understanding of key concepts across various fields like programming, data structures, algorithms, and much more!
+                </h3>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li><strong>Total Questions:</strong> The quiz consists of 4 multiple-choice questions.</li>
+                    <li><strong>Time Limit:</strong> You have 5 minutes to complete the entire quiz.</li>
+                    <li><strong>Scoring:</strong> Each correct answer is worth 1 point. No negative marking for wrong answers.</li>
+                    <li><strong>Submission:</strong> Once time is up, your answers will be automatically submitted.</li>
+                    <li><strong>No Retakes:</strong> You only have one attempt, so choose your answers carefully.</li>
+                </ol>
+                <button id="start-btn">Start Your Quzizz</button>
+            </div>
+
+            <div class="quiz-section">
+                <form id="quiz-form" action="">
+                    <h4 id="questions">Question:</h4>
+                    <label for="in-1"><input type="radio" name="option" id="in-1"> <span>Option 1</span></label><br>
+                    <label for="in-2"><input type="radio" name="option" id="in-2"> <span>Option 2</span></label><br>
+                    <label for="in-3"><input type="radio" name="option" id="in-3"> <span>Option 3</span></label><br>
+                    <label for="in-4"><input type="radio" name="option" id="in-4"> <span>Option 4</span></label><br>
+                    <input type="submit" value="Submit" id="submit-btn">
+                </form>
+            </div>
+            <div class="show-result quiz-section">
+                <p id="score"></p>
+                <h1 id="result" style="text-align: center;"></h1>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
