@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "SUSE";
+}
+body {
+    background-color: #f5f5f5; /* Light gray background for the whole page */
+    color: #333333; /* Dark gray text color */
+    font-family: "SUSE", sans-serif; /* Ensure the font is applied */
+}
+main{
+    display: flex;
+}
+.user-side{
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0E0D0D; 
+    flex-direction: column;
+    overflow: hidden;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30rem;
+    padding: 33px;
+    gap: 20px;
+    background-color: #ffffff; /* White background for content area */
+    border: 5px solid #fcba03; /* Yellow border for emphasis */
+    border-radius: 10px;
+}
+.content input[type="number"]{
+    border-radius: 5px;
+    padding: 10px;
+}
+.content button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Nerko";
+    background-color: #fcba03; /* Vibrant yellow button background */
+    color: #000000; /* Black text on yellow button */
+    font-weight: bolder;
+    cursor: pointer;
+}
+.displaycard{
+    width: 50vw;
+    background: radial-gradient(circle, rgba(25, 25, 112, 0.8), rgba(0, 0, 0, 0.8));
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    max-height: 100vh; /* Set maximum height to viewport height */
+    padding: 10px; /* Add some padding to ensure content doesn't touch edges */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.card{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 180px;
+    background-color: #ffffff; /* White background for individual cards */
+    border: 2px solid #000000; /* Black border for card outline */
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    animation: glow 1.5s ease-in-out infinite;
+}
+.content button:hover {
+    background-color: #fdd835; /* Golden yellow hover effect for button */
+}
+
+.card:hover {
+    border-color: #fcba03; /* Yellow border on hover for cards */
+}
+#type-selection{
+    height: 30px;
+    width: 155px;
+    border-radius: 5px;
+}

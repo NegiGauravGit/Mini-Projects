@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Cards</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="user-side">
+        <div class="logo">
+            <img src="img/Symbol-Pokemon-Logo-removebg.png" alt="" style="height: 20vh;">
+        </div>
+        <div class="main-img">
+            <img src="img/pokemon (1).png" alt="main-image" style="height: 30vh">
+        </div>
+        <div class="content">
+          <label for="input-1">
+            <input
+                type="number"
+                placeholder="Enter Number Of Cards"
+                id="input-1"
+              />
+          </label>
+            <select name="" id="type-selection">
+              <option value="" selected disabled>Select Pokemon Type</option>
+              <option value="normal">normal</option>
+              <option value="fighting">fighting</option>
+              <option value="flying">flying</option>
+              <option value="poison">poison</option>
+              <option value="ground">ground</option>
+              <option value="rock">rock</option>
+              <option value="bug">bug</option>
+              <option value="ghost">ghost</option>
+              <option value="steel">steel</option>
+              <option value="fire">fire</option>
+              <option value="water">water</option>
+              <option value="grass">grass</option>
+              <option value="electric">electric</option>
+              <option value="psychic">psychic</option>
+              <option value="ice">ice</option>
+              <option value="dragon">dragon</option>
+              <option value="dark">dark</option>
+              <option value="fairy">fairy</option>
+              <option value="stellar">stellar</option>
+              <option value="unknown">unknown</option>
+            </select>
+          <button id="display-Btn">Display Card</button>
+        </div>
+      </div>
+      <div class="displaycard"></div>
+    </main>
+    <script src="Script.js"></script>
+  </body>
+</html>
